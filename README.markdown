@@ -12,6 +12,11 @@ I didn't like having a global `base64` variable around, that's all.
 * `$.base64.decode( "dGhpcyBpcyBhIHRlc3Q=" )` returns `"this is a test"`
 
 
+### Known issues
+
+JSLint is complaining about the "unexpected use of '<<'/'|'".  No idea, suggestions welcome.
+
+
 ### Author (dramatization)
 
 Original code by [Nick Galbreath](http://stringencoders.googlecode.com/svn-history/r210/trunk/javascript/base64.js).
