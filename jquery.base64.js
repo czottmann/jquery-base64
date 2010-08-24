@@ -61,7 +61,8 @@
 jQuery.base64 = ( function( $ ) {
   
   var _PADCHAR = "=",
-    _ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    _ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
+    _VERSION = "1.0";
 
 
   function _getbyte64( s, i ) {
@@ -181,7 +182,8 @@ jQuery.base64 = ( function( $ ) {
 
   return {
     decode: _decode,
-    encode: _encode
+    encode: _encode,
+    VERSION: _VERSION
   };
       
 }( jQuery ) );
