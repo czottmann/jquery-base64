@@ -17,7 +17,7 @@ I didn't like having a global `base64` variable around, that's all.
 JSLint is complaining about the "unexpected use of '<<'/'|'".  No idea, suggestions welcome.
 
 
-## Author (dramatization)
+## Developers
 
 Original code by [Nick Galbreath](http://stringencoders.googlecode.com/svn-history/r210/trunk/javascript/base64.js).
 Port by [Carlo Zottmann](http://github.com/carlo).
