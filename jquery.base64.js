@@ -64,7 +64,6 @@ jQuery.base64 = ( function( $ ) {
     _ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
     _VERSION = "1.0";
 
-
   function _getbyte64( s, i ) {
     // This is oddly fast, except on Chrome/V8.
     // Minimal or no improvement in performance by using a
@@ -93,8 +92,10 @@ jQuery.base64 = ( function( $ ) {
       return s;
     }
 
-    if ( imax % 4 !== 0 ) {
-      throw "Cannot decode base64";
+    // handle base64 URL safe strings
+    while ( imax % 4 !== 0 ) {
+      s += '=';
+      imax = s.length;
     }
 
     if ( s.charAt( imax - 1 ) === _PADCHAR ) {
