@@ -178,11 +178,22 @@ jQuery.base64 = ( function( $ ) {
 
     return x.join( "" );
   }
+  
+  function _urlsafe_encode( s ) {
+      return _encode(s).replace(/\+/g, '-').replace(/\//g, '_');
+  }
+
+
+  function _urlsafe_decode( s ) {
+      return _decode(s).replace(/\-/g, '+').replace(/\_/g, '/');
+  }
 
 
   return {
     decode: _decode,
     encode: _encode,
+    urlsafe_decode: _urlsafe_decode,
+    urlsafe_encode: _urlsafe_encode,
     VERSION: _VERSION
   };
       
